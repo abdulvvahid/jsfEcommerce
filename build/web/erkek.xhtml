@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Ürünler</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta name="description" content=""></meta>
+        <meta name="author" content=""></meta>
+        <link rel="stylesheet" href="style.css"></link> 
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"></link>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body>
+        <h:form>
+        <nav class="navbar bg-white navbar-light fixed-top navbar-expand-sm"> 
+            <h:commandLink action="/index?faces-redirect=true" value="NoorMarkt" class="nav-bar"/>
+            <div class="container menu ml-auto mr-auto">
+            
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/erkek?faces-redirect=true" value="Erkek Giyim" />
+                    </li>
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/kadin?faces-redirect=true" value="Kadın Giyim"/>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/aksesuar?faces-redirect=true" value="Aksesuar"/>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/sepet?faces-redirect=true" value="Sepet"/>
+                    </li>
+                </ul>
+        
+            </div>
+            <h:commandLink action="/login?faces-redirect=true" value="Giris" class="nav-brand"/>
+        </nav>
+        </h:form>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 offset-4 border-success" style="padding-top: 100px;">
+                    <h:dataTable class="table table-bordered" value="#{kayitCek.urunleriCek()}" var="urun">
+                        
+                        <h:column>
+                            <f:facet name="header">Urunler</f:facet>
+                            <h:outputText value="#{urun.urun_id}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Urun Adı</f:facet>
+                            <h:outputText value="#{urun.urun_name}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Urun Kategori</f:facet>
+                            <h:outputText value="#{urun.urun_kategori}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Urun Fiyat</f:facet>
+                            <h:outputText value="#{urun.urun_fiyat}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Urun Adet</f:facet>
+                            <h:outputText value="#{urun.urun_adet}"></h:outputText>
+                        </h:column>
+                        <h:column>
+                            <h:form>
+                                <h:commandButton value="Sepete Ekle" action="sepetekle"></h:commandButton>
+                            </h:form>
+                        </h:column>
+                        
+                    </h:dataTable>
+                    </div>
+                </div>                
+            </div>
+        
+        </main>
+	
+        <div class="copyright" style="margin-top: 350px;">
+		<div class="container">
+			<small>
+				Copyright © Programming Application PA01 2020
+			</small>
+		</div>
+	</div>
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Ucuz Alışverişin Adresi</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta name="description" content=""></meta>
+        <meta name="author" content=""></meta>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
+        <link rel="stylesheet" href="style.css"></link> 
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"></link>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <style>   .copyright{
+                background-color: #002752;
+}      </style>
+    </h:head>
+    <h:body>
+        
+        //Navbar Menu
+        <h:form>
+        <nav class="navbar bg-white navbar-light fixed-top navbar-expand-sm"> 
+            <h:commandLink action="/index?faces-redirect=true" value="NoorMarkt" class="nav-bar"/>
+            <div class="container menu ml-auto mr-auto">
+            
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/erkek?faces-redirect=true" value="Erkek Giyim" />
+                    </li>
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/kadin?faces-redirect=true" value="Kadın Giyim"/>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/aksesuar?faces-redirect=true" value="Aksesuar"/>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <h:commandLink action="/sepet?faces-redirect=true" value="Sepet"/>
+                    </li>
+                </ul>
+        
+            </div>
+            <h:commandLink action="/login?faces-redirect=true" value="Giris" class="nav-brand"/>
+        </nav>
+        </h:form>
+        //Header
+        
+        <header>
+            <div class="jumbotron bg-info text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6" style="float:left;">
+                            <h1 class="display-4 font-italic">
+                                Ucuz ve Güvenilir Alışverişin Adresi
+                            </h1>
+                            <p class="lead my-3">
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt massa eget finibus consectetur. Interdum et malesuada fames ac ante.
+                            </p>
+                             <a href="#" class="lead mb-0 text-white">Ürün Çeşitleri...</a>
+                         </div>
+                        <div class="col-md-6 col-lg-6" style="float:left;">
+                            <img src="img/shopping.png" class="resim" style="width: 100%; height: 300px;"></img>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+                
+        <main>
+            
+            <div class="container">
+                <h:form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h:commandLink action="/erkek?faces-redirect=true">
+                            <h:graphicImage value="img/erkek.jpg" class="resim2"/>
+                        </h:commandLink>
+                    </div>
+                    <div class="col-md-4">
+                        <h:commandLink action="/kadin?faces-redirect=true">
+                            <h:graphicImage value="img/kadın.jpg" class="resim2"/>
+                        </h:commandLink>
+                    </div>
+                    <div class="col-md-4">
+                        <h:commandLink action="/aksesuar?faces-redirect=true">
+                            <h:graphicImage value="img/aksesuar.jpg" class="resim2"/>
+                        </h:commandLink>
+                    </div>
+                </div>
+                </h:form>
+            </div>
+            
+        </main>
+        
+        <footer>
+		<div class="container clearfix">
+                    <div class="row foot">                        
+			<div class="col-md-4">
+				<h3 class="text-center">NoorMarkt Hakkında</h3>
+                                <p class="text-center">
+					NoorMarkt sizlerin internet üzerinden daha güvenilir alışveriş yapabilmeniz için proje ödevi olarak oluşturuldu.
+				</p>
+			</div>
+			<div class="col-md-4">
+                            <h3 class="text-center">Sosyal Medya Hesaplarımız</h3>
+				<ul>					
+					<li>
+						<button class="btn btn-outline btn-social">
+							<i class="fab fa-fw fa-facebook-f"></i>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-outline btn-social">
+							<i class="fab fa-fw fa-google-plus-g"></i>
+						</button>
+					</li>					
+					<li>
+						<button class="btn btn-outline btn-social">
+							<i class="fab fa-fw fa-twitter"></i>
+						</button>
+					</li>					
+					<li>
+						<button class="btn btn-outline btn-social">
+							<i class="fab fa-fw fa-linkedin-in"></i>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-outline btn-social">
+							<i class="fab fa-fw fa-dribbble"></i>
+						</button>
+					</li>					
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3 class="text-center">Adres</h3>
+                                <p class="text-center">
+					Yenibosna Koçtaş Otopark (İndirim Çadırı)
+					
+				</p>
+			</div>
+                    </div>
+		</div>
+	</footer>
+	
+	<div class="copyright">
+		<div class="container">
+			<small>
+				Copyright © Programming Application PA01 2020
+			</small>
+		</div>
+	</div>
+        
+    </h:body>
+</html>
+
